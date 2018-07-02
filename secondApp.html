@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html ng-app="">
+    <head>
+            <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>{{title}}</title>
+        <link rel="stylesheet" href="./css/w3.css">
+        <script src="angular.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <div>
+            <h3>1.ng-model: 双向绑定</h3>
+            <input  class="w3-col.s6" type="text" placeholder="Input your name" name="" id="" value="" ng-model="name">
+            <h3>2.ng-bind: 单向绑定不太好用</h3>
+            <h3>3.ng-bind会将bind里面的数据直接替换</h3>
+            <h3>4.angular表达式{{}} 1.方便 2.放在任何地方（可以放在style里面</h3>
+            <div class="w3-col.s6">
+                    我的名字叫:{{name}}
+                    <span ng-bind="name"></span>
+            </div>
+            <input type="text" class="w3-input" placeholder="Input with ng-model change style" ng-model="background">
+            <div style="width:200px;height:200px;background:{{background}}"></div>
+            <input type="text" class="w3-input" placeholder="Input change title" ng-model="title">
+        </div>
+        <h3>5.ng-init初始化</h3>
+        <div ng-init="a=0;b=0;">
+                <input type="text" class="w3-col.s6" placeholder="Input change title" ng-model="a">
+                <input type="text" class="w3-col.s6" placeholder="Input change title" ng-model="b">
+                <span class="w3-col.s6">{{a*b}}</span>
+        </div>
+
+        <h3>6.指令: a.系统指令ng-init; ng-model; ng-bind b.自定义指令</h3>
+    </body>
+</html>

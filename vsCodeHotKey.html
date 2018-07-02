@@ -1,0 +1,2227 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://blog.csdn.net/crper/article/details/54099319 -->
+<html lang="zh-CN" class="gr__blog_csdn_net">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script charset="utf-8" src="./vsCodeHotKey_files/b.js.download"></script>
+    <script charset="utf-8" src="./vsCodeHotKey_files/b.js.download"></script>
+    <script type="text/javascript" async="" src="./vsCodeHotKey_files/pr.js.download"></script>
+
+    <link rel="canonical" href="https://blog.csdn.net/crper/article/details/54099319">
+
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="referrer" content="always">
+    <meta name="description" content="前言VSCode的快捷键继承了一些IDE风格，有VS的身影，也有Emacs的身影。。简言之，内置快捷键玩熟了，效率提高不是一点两点。VsCode 快捷键有五种组合方式（科普）
+Ctrl + Shift + ? : 这种常规组合按钮
+Ctrl + V Ctrl +V : 同时依赖一个按键的组合
+Shift + V c : 先组合后单键的输入
+Ctrl + Click: 键盘 + 鼠标点击
+Ctrl +">
+    <meta name="keywords" content="visual studio,emacs">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="alternate" media="handheld" href="https://blog.csdn.net/crper/article/details/54099319#">
+    <meta name="shenma-site-verification" content="5a59773ab8077d4a62bf469ab966a63b_1497598848">
+
+    <link href="https://csdnimg.cn/public/favicon.ico" rel="SHORTCUT ICON">
+    <title>VS Code折腾记 - (2) 快捷键大全，没有更全 - CSDN博客</title>
+
+    <link rel="stylesheet" href="./vsCodeHotKey_files/detail-eba6097365.min.css">
+    <link rel="stylesheet" href="./vsCodeHotKey_files/skin3-template-88717cedf2.min.css">
+    <link rel="stylesheet" href="./vsCodeHotKey_files/sandalstrap.min.css">
+    <style>
+        .MathJax,
+        .MathJax_Message,
+        .MathJax_Preview {
+            display: none
+        }
+    </style>
+    <style type="text/css" id="QIHOO_FEED_CSS">
+        newsfeed {
+            display: block;
+        }
+
+        newsfeed .img {
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 info-div {
+            display: block
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .singleImage {
+            background-color: #fff;
+            padding: 0px 0px 0px 0px;
+            overflow: hidden;
+            width: 852px;
+            height: 90px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .singleImage .wrap {
+            position: relative;
+            width: 852px;
+            height: 90px;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .singleImage .visited .singleImage-title {
+            color: #9e9e9e;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .singleImage .singleImage-img {
+            width: 120px;
+            height: 90px;
+            padding: 0px 0px;
+            display: block;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .singleImage .singleImage-img-left {
+            float: left;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .singleImage .singleImage-img-right {
+            float: right;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .singleImage .singleImage-img-top {
+            position: absolute;
+            top: 0;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .singleImage .singleImage-img-bottom {
+            position: absolute;
+            bottom: 0;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .singleImage .singleImage-img .img {
+            width: 120px;
+            height: 90px;
+            border-radius: 0px;
+            position: relative;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .singleImage .singleImage-body {
+            width: 732px;
+            height: 90px;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .singleImage .singleImage-body-left {
+            float: left;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .singleImage .singleImage-body-right {
+            float: left;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .singleImage .singleImage-body-top {
+            position: absolute;
+            bottom: 0;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .singleImage .singleImage-body-bottom {
+            position: absolute;
+            top: 0;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .singleImage .singleImage-title {
+            font-size: 20px;
+            font-family: Microsoft Yahei;
+            font-weight: bold;
+            color: #333;
+            padding: 0px 0px 10px 0px;
+            display: block;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .singleImage .singleImage-title:hover {
+            color: #ca0c16;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .singleImage .singleImage-desc {
+            font-size: 14px;
+            font-family: Microsoft Yahei;
+            color: #6b6b6b;
+            display: block;
+            padding: 0px 0px 0px 0px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .singleImage .ads-tag {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 22px;
+            height: 12px;
+            background-image: url(https://p0.ssl.qhimg.com/t01c5fc7f8612d6b610.png);
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .mulImage .visited .mulimg-title {
+            color: #9e9e9e;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .mulImage {
+            .QIHOO__WEB__SO__1530519721762_889 padding: {
+                paddingTop
+            }
+            .QIHOO__WEB__SO__1530519721762_889 px {
+                paddingRight
+            }
+            .QIHOO__WEB__SO__1530519721762_889 px {
+                paddingBottom
+            }
+            .QIHOO__WEB__SO__1530519721762_889 px {
+                paddingLeft
+            }
+            px;
+            .QIHOO__WEB__SO__1530519721762_889 background-color: {
+                backgroundColor
+            }
+            ;
+            width: NaNpx;
+            height: NaNpx;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .mulImage .mulimg-wrapper {
+            position: relative;
+            vertical-align: top;
+            width: NaNpx;
+            height: NaNpx;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .mulImage .mulimg-title {
+            overflow: hidden;
+            .QIHOO__WEB__SO__1530519721762_889 font-size: {
+                titleFontSize
+            }
+            px;
+            .QIHOO__WEB__SO__1530519721762_889 font-family: {
+                titleFontFamily
+            }
+            ;
+            .QIHOO__WEB__SO__1530519721762_889 font-weight: {
+                titleFontWeight
+            }
+            ;
+            .QIHOO__WEB__SO__1530519721762_889 color: {
+                titleFontColor
+            }
+            ;
+            .QIHOO__WEB__SO__1530519721762_889 padding: {
+                titlePaddingTop
+            }
+            .QIHOO__WEB__SO__1530519721762_889 px {
+                titlePaddingRight
+            }
+            .QIHOO__WEB__SO__1530519721762_889 px {
+                titlePaddingBottom
+            }
+            .QIHOO__WEB__SO__1530519721762_889 px {
+                titlePaddingLeft
+            }
+            px;
+            line-height: 1.3;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            letter-spacing:0.05em;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .mulImage .mulimg-title:hover {
+            .QIHOO__WEB__SO__1530519721762_889 color: {
+                hoverColor
+            }
+            ;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .mulImage .mulimg-grid-wrap {
+            position: relative;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .mulImage .mulimg-figure-grid {
+            overflow: hidden;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .mulImage .mulimg-figure {
+            float: left;
+            .QIHOO__WEB__SO__1530519721762_889 margin-right: {
+                imageSplitWidth
+            }
+            px;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .mulImage .mulimg-figure-img {
+            overflow: hidden;
+            position: relative;
+            padding: NaNpx 0px;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .mulImage .mulimg-figure-img .img {
+            .QIHOO__WEB__SO__1530519721762_889 width: {
+                imgW
+            }
+            px;
+            height:NaNpx;
+            .QIHOO__WEB__SO__1530519721762_889 border-radius: {
+                imageBorderRadius
+            }
+            px;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .mulImage .mulimg-extra {
+            color: #999;
+            height: NaNpx;
+            line-height: NaNpx;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .mulImage .mulimg-extra .mul-ads-tag {
+            width: 30px;
+            color: #ddd;
+            font-size: 12px;
+            display: inline;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .mulImage .mulimg-extra .ads-tag {
+            font-size: 12px;
+            color: #999;
+            display: inline;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .largeImage .visited .largeImage-title {
+            color: #9e9e9e;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .largeImage {
+            .QIHOO__WEB__SO__1530519721762_889 padding: {
+                paddingTop
+            }
+            .QIHOO__WEB__SO__1530519721762_889 px {
+                paddingRight
+            }
+            .QIHOO__WEB__SO__1530519721762_889 px {
+                paddingBottom
+            }
+            .QIHOO__WEB__SO__1530519721762_889 px {
+                paddingLeft
+            }
+            px;
+            .QIHOO__WEB__SO__1530519721762_889 background-color: {
+                backgroundColor
+            }
+            ;
+            width: NaNpx;
+            height: NaNpx;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .largeImage .largeImage-wrapper {
+            position: relative;
+            vertical-align: top;
+            width: NaNpx;
+            height: NaNpx;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .largeImage .largeImage-title {
+            display: none;
+            overflow: hidden;
+            .QIHOO__WEB__SO__1530519721762_889 font-size: {
+                titleFontSize
+            }
+            px;
+            .QIHOO__WEB__SO__1530519721762_889 font-family: {
+                titleFontFamily
+            }
+            ;
+            .QIHOO__WEB__SO__1530519721762_889 font-weight: {
+                titleFontWeight
+            }
+            ;
+            .QIHOO__WEB__SO__1530519721762_889 color: {
+                titleFontColor
+            }
+            ;
+            .QIHOO__WEB__SO__1530519721762_889 padding: {
+                titlePaddingTop
+            }
+            .QIHOO__WEB__SO__1530519721762_889 px {
+                titlePaddingRight
+            }
+            .QIHOO__WEB__SO__1530519721762_889 px {
+                titlePaddingBottom
+            }
+            .QIHOO__WEB__SO__1530519721762_889 px {
+                titlePaddingLeft
+            }
+            px;
+            line-height: 1.3;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            letter-spacing:0.05em;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .largeImage .largeImage-title:hover {
+            .QIHOO__WEB__SO__1530519721762_889 color: {
+                hoverColor
+            }
+            ;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .largeImage .largeImage-body {
+            position: relative;
+            vertical-align: top;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .largeImage .largeImage-grid-wrap {
+            position: relative;
+            padding: NaNpx 0px;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .largeImage .largeImage-grid-wrap .img {
+            .QIHOO__WEB__SO__1530519721762_889 width: {
+                imgW
+            }
+            px;
+            height:NaNpx;
+            .QIHOO__WEB__SO__1530519721762_889 border-radius: {
+                imageBorderRadius
+            }
+            px;
+            position: relative;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .largeImage .largeImage-extra {
+            display: none;
+            color: #999;
+            height: NaNpx;
+            line-height: NaNpx;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .largeImage .largeImage-extra .largeImage-ad-tag {
+            width: 30px;
+            color: #ddd;
+            font-size: 12px;
+            display: inline;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .largeImage .largeImage-extra .largeImage-ad-src {
+            font-size: 12px;
+            color: #999;
+            display: inline;
+        }
+
+        .QIHOO__WEB__SO__1530519721762_889 .largeImage .ads-tag {
+            position: absolute;
+            display: block;
+            top: 0;
+            right: 0;
+            width: 22px;
+            height: 12px;
+            background-image: url(https://p0.ssl.qhimg.com/t01c5fc7f8612d6b610.png);
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 info-div {
+            display: block
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .singleImage {
+            background-color: #fff;
+            padding: 0px 0px 0px 0px;
+            overflow: hidden;
+            width: 852px;
+            height: 90px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .singleImage .wrap {
+            position: relative;
+            width: 852px;
+            height: 90px;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .singleImage .visited .singleImage-title {
+            color: #9e9e9e;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .singleImage .singleImage-img {
+            width: 120px;
+            height: 90px;
+            padding: 0px 0px;
+            display: block;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .singleImage .singleImage-img-left {
+            float: left;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .singleImage .singleImage-img-right {
+            float: right;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .singleImage .singleImage-img-top {
+            position: absolute;
+            top: 0;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .singleImage .singleImage-img-bottom {
+            position: absolute;
+            bottom: 0;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .singleImage .singleImage-img .img {
+            width: 120px;
+            height: 90px;
+            border-radius: 0px;
+            position: relative;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .singleImage .singleImage-body {
+            width: 732px;
+            height: 90px;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .singleImage .singleImage-body-left {
+            float: left;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .singleImage .singleImage-body-right {
+            float: left;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .singleImage .singleImage-body-top {
+            position: absolute;
+            bottom: 0;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .singleImage .singleImage-body-bottom {
+            position: absolute;
+            top: 0;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .singleImage .singleImage-title {
+            font-size: 20px;
+            font-family: Microsoft Yahei;
+            font-weight: bold;
+            color: #333;
+            padding: 0px 0px 10px 0px;
+            display: block;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .singleImage .singleImage-title:hover {
+            color: #ca0c16;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .singleImage .singleImage-desc {
+            font-size: 14px;
+            font-family: Microsoft Yahei;
+            color: #6b6b6b;
+            display: block;
+            padding: 0px 0px 0px 0px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .singleImage .ads-tag {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 22px;
+            height: 12px;
+            background-image: url(https://p0.ssl.qhimg.com/t01c5fc7f8612d6b610.png);
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .mulImage .visited .mulimg-title {
+            color: #9e9e9e;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .mulImage {
+            .QIHOO__WEB__SO__1530519721799_903 padding: {
+                paddingTop
+            }
+            .QIHOO__WEB__SO__1530519721799_903 px {
+                paddingRight
+            }
+            .QIHOO__WEB__SO__1530519721799_903 px {
+                paddingBottom
+            }
+            .QIHOO__WEB__SO__1530519721799_903 px {
+                paddingLeft
+            }
+            px;
+            .QIHOO__WEB__SO__1530519721799_903 background-color: {
+                backgroundColor
+            }
+            ;
+            width: NaNpx;
+            height: NaNpx;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .mulImage .mulimg-wrapper {
+            position: relative;
+            vertical-align: top;
+            width: NaNpx;
+            height: NaNpx;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .mulImage .mulimg-title {
+            overflow: hidden;
+            .QIHOO__WEB__SO__1530519721799_903 font-size: {
+                titleFontSize
+            }
+            px;
+            .QIHOO__WEB__SO__1530519721799_903 font-family: {
+                titleFontFamily
+            }
+            ;
+            .QIHOO__WEB__SO__1530519721799_903 font-weight: {
+                titleFontWeight
+            }
+            ;
+            .QIHOO__WEB__SO__1530519721799_903 color: {
+                titleFontColor
+            }
+            ;
+            .QIHOO__WEB__SO__1530519721799_903 padding: {
+                titlePaddingTop
+            }
+            .QIHOO__WEB__SO__1530519721799_903 px {
+                titlePaddingRight
+            }
+            .QIHOO__WEB__SO__1530519721799_903 px {
+                titlePaddingBottom
+            }
+            .QIHOO__WEB__SO__1530519721799_903 px {
+                titlePaddingLeft
+            }
+            px;
+            line-height: 1.3;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            letter-spacing:0.05em;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .mulImage .mulimg-title:hover {
+            .QIHOO__WEB__SO__1530519721799_903 color: {
+                hoverColor
+            }
+            ;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .mulImage .mulimg-grid-wrap {
+            position: relative;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .mulImage .mulimg-figure-grid {
+            overflow: hidden;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .mulImage .mulimg-figure {
+            float: left;
+            .QIHOO__WEB__SO__1530519721799_903 margin-right: {
+                imageSplitWidth
+            }
+            px;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .mulImage .mulimg-figure-img {
+            overflow: hidden;
+            position: relative;
+            padding: NaNpx 0px;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .mulImage .mulimg-figure-img .img {
+            .QIHOO__WEB__SO__1530519721799_903 width: {
+                imgW
+            }
+            px;
+            height:NaNpx;
+            .QIHOO__WEB__SO__1530519721799_903 border-radius: {
+                imageBorderRadius
+            }
+            px;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .mulImage .mulimg-extra {
+            color: #999;
+            height: NaNpx;
+            line-height: NaNpx;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .mulImage .mulimg-extra .mul-ads-tag {
+            width: 30px;
+            color: #ddd;
+            font-size: 12px;
+            display: inline;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .mulImage .mulimg-extra .ads-tag {
+            font-size: 12px;
+            color: #999;
+            display: inline;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .largeImage .visited .largeImage-title {
+            color: #9e9e9e;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .largeImage {
+            .QIHOO__WEB__SO__1530519721799_903 padding: {
+                paddingTop
+            }
+            .QIHOO__WEB__SO__1530519721799_903 px {
+                paddingRight
+            }
+            .QIHOO__WEB__SO__1530519721799_903 px {
+                paddingBottom
+            }
+            .QIHOO__WEB__SO__1530519721799_903 px {
+                paddingLeft
+            }
+            px;
+            .QIHOO__WEB__SO__1530519721799_903 background-color: {
+                backgroundColor
+            }
+            ;
+            width: NaNpx;
+            height: NaNpx;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .largeImage .largeImage-wrapper {
+            position: relative;
+            vertical-align: top;
+            width: NaNpx;
+            height: NaNpx;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .largeImage .largeImage-title {
+            display: none;
+            overflow: hidden;
+            .QIHOO__WEB__SO__1530519721799_903 font-size: {
+                titleFontSize
+            }
+            px;
+            .QIHOO__WEB__SO__1530519721799_903 font-family: {
+                titleFontFamily
+            }
+            ;
+            .QIHOO__WEB__SO__1530519721799_903 font-weight: {
+                titleFontWeight
+            }
+            ;
+            .QIHOO__WEB__SO__1530519721799_903 color: {
+                titleFontColor
+            }
+            ;
+            .QIHOO__WEB__SO__1530519721799_903 padding: {
+                titlePaddingTop
+            }
+            .QIHOO__WEB__SO__1530519721799_903 px {
+                titlePaddingRight
+            }
+            .QIHOO__WEB__SO__1530519721799_903 px {
+                titlePaddingBottom
+            }
+            .QIHOO__WEB__SO__1530519721799_903 px {
+                titlePaddingLeft
+            }
+            px;
+            line-height: 1.3;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            letter-spacing:0.05em;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .largeImage .largeImage-title:hover {
+            .QIHOO__WEB__SO__1530519721799_903 color: {
+                hoverColor
+            }
+            ;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .largeImage .largeImage-body {
+            position: relative;
+            vertical-align: top;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .largeImage .largeImage-grid-wrap {
+            position: relative;
+            padding: NaNpx 0px;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .largeImage .largeImage-grid-wrap .img {
+            .QIHOO__WEB__SO__1530519721799_903 width: {
+                imgW
+            }
+            px;
+            height:NaNpx;
+            .QIHOO__WEB__SO__1530519721799_903 border-radius: {
+                imageBorderRadius
+            }
+            px;
+            position: relative;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .largeImage .largeImage-extra {
+            display: none;
+            color: #999;
+            height: NaNpx;
+            line-height: NaNpx;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .largeImage .largeImage-extra .largeImage-ad-tag {
+            width: 30px;
+            color: #ddd;
+            font-size: 12px;
+            display: inline;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .largeImage .largeImage-extra .largeImage-ad-src {
+            font-size: 12px;
+            color: #999;
+            display: inline;
+        }
+
+        .QIHOO__WEB__SO__1530519721799_903 .largeImage .ads-tag {
+            position: absolute;
+            display: block;
+            top: 0;
+            right: 0;
+            width: 22px;
+            height: 12px;
+            background-image: url(https://p0.ssl.qhimg.com/t01c5fc7f8612d6b610.png);
+        }
+    </style>
+    <style type="text/css">
+        .MathJax_Hover_Frame {
+            border-radius: .25em;
+            -webkit-border-radius: .25em;
+            -moz-border-radius: .25em;
+            -khtml-border-radius: .25em;
+            box-shadow: 0px 0px 15px #83A;
+            -webkit-box-shadow: 0px 0px 15px #83A;
+            -moz-box-shadow: 0px 0px 15px #83A;
+            -khtml-box-shadow: 0px 0px 15px #83A;
+            border: 1px solid #A6D ! important;
+            display: inline-block;
+            position: absolute
+        }
+
+        .MathJax_Menu_Button .MathJax_Hover_Arrow {
+            position: absolute;
+            cursor: pointer;
+            display: inline-block;
+            border: 2px solid #AAA;
+            border-radius: 4px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -khtml-border-radius: 4px;
+            font-family: 'Courier New', Courier;
+            font-size: 9px;
+            color: #F0F0F0
+        }
+
+        .MathJax_Menu_Button .MathJax_Hover_Arrow span {
+            display: block;
+            background-color: #AAA;
+            border: 1px solid;
+            border-radius: 3px;
+            line-height: 0;
+            padding: 4px
+        }
+
+        .MathJax_Hover_Arrow:hover {
+            color: white !important;
+            border: 2px solid #CCC !important
+        }
+
+        .MathJax_Hover_Arrow:hover span {
+            background-color: #CCC !important
+        }
+    </style>
+    <style type="text/css">
+        #MathJax_About {
+            position: fixed;
+            left: 50%;
+            width: auto;
+            text-align: center;
+            border: 3px outset;
+            padding: 1em 2em;
+            background-color: #DDDDDD;
+            color: black;
+            cursor: default;
+            font-family: message-box;
+            font-size: 120%;
+            font-style: normal;
+            text-indent: 0;
+            text-transform: none;
+            line-height: normal;
+            letter-spacing: normal;
+            word-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            float: none;
+            z-index: 201;
+            border-radius: 15px;
+            -webkit-border-radius: 15px;
+            -moz-border-radius: 15px;
+            -khtml-border-radius: 15px;
+            box-shadow: 0px 10px 20px #808080;
+            -webkit-box-shadow: 0px 10px 20px #808080;
+            -moz-box-shadow: 0px 10px 20px #808080;
+            -khtml-box-shadow: 0px 10px 20px #808080;
+            filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')
+        }
+
+        #MathJax_About.MathJax_MousePost {
+            outline: none
+        }
+
+        .MathJax_Menu {
+            position: absolute;
+            background-color: white;
+            color: black;
+            width: auto;
+            padding: 2px;
+            border: 1px solid #CCCCCC;
+            margin: 0;
+            cursor: default;
+            font: menu;
+            text-align: left;
+            text-indent: 0;
+            text-transform: none;
+            line-height: normal;
+            letter-spacing: normal;
+            word-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            float: none;
+            z-index: 201;
+            box-shadow: 0px 10px 20px #808080;
+            -webkit-box-shadow: 0px 10px 20px #808080;
+            -moz-box-shadow: 0px 10px 20px #808080;
+            -khtml-box-shadow: 0px 10px 20px #808080;
+            filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')
+        }
+
+        .MathJax_MenuItem {
+            padding: 2px 2em;
+            background: transparent
+        }
+
+        .MathJax_MenuArrow {
+            position: absolute;
+            right: .5em;
+            padding-top: .25em;
+            color: #666666;
+            font-size: .75em
+        }
+
+        .MathJax_MenuActive .MathJax_MenuArrow {
+            color: white
+        }
+
+        .MathJax_MenuArrow.RTL {
+            left: .5em;
+            right: auto
+        }
+
+        .MathJax_MenuCheck {
+            position: absolute;
+            left: .7em
+        }
+
+        .MathJax_MenuCheck.RTL {
+            right: .7em;
+            left: auto
+        }
+
+        .MathJax_MenuRadioCheck {
+            position: absolute;
+            left: 1em
+        }
+
+        .MathJax_MenuRadioCheck.RTL {
+            right: 1em;
+            left: auto
+        }
+
+        .MathJax_MenuLabel {
+            padding: 2px 2em 4px 1.33em;
+            font-style: italic
+        }
+
+        .MathJax_MenuRule {
+            border-top: 1px solid #CCCCCC;
+            margin: 4px 1px 0px
+        }
+
+        .MathJax_MenuDisabled {
+            color: GrayText
+        }
+
+        .MathJax_MenuActive {
+            background-color: Highlight;
+            color: HighlightText
+        }
+
+        .MathJax_MenuDisabled:focus,
+        .MathJax_MenuLabel:focus {
+            background-color: #E8E8E8
+        }
+
+        .MathJax_ContextMenu:focus {
+            outline: none
+        }
+
+        .MathJax_ContextMenu .MathJax_MenuItem:focus {
+            outline: none
+        }
+
+        #MathJax_AboutClose {
+            top: .2em;
+            right: .2em
+        }
+
+        .MathJax_Menu .MathJax_MenuClose {
+            top: -10px;
+            left: -10px
+        }
+
+        .MathJax_MenuClose {
+            position: absolute;
+            cursor: pointer;
+            display: inline-block;
+            border: 2px solid #AAA;
+            border-radius: 18px;
+            -webkit-border-radius: 18px;
+            -moz-border-radius: 18px;
+            -khtml-border-radius: 18px;
+            font-family: 'Courier New', Courier;
+            font-size: 24px;
+            color: #F0F0F0
+        }
+
+        .MathJax_MenuClose span {
+            display: block;
+            background-color: #AAA;
+            border: 1.5px solid;
+            border-radius: 18px;
+            -webkit-border-radius: 18px;
+            -moz-border-radius: 18px;
+            -khtml-border-radius: 18px;
+            line-height: 0;
+            padding: 8px 0 6px
+        }
+
+        .MathJax_MenuClose:hover {
+            color: white !important;
+            border: 2px solid #CCC !important
+        }
+
+        .MathJax_MenuClose:hover span {
+            background-color: #CCC !important
+        }
+
+        .MathJax_MenuClose:hover:focus {
+            outline: none
+        }
+    </style>
+    <style type="text/css">
+        .MathJax_Preview .MJXf-math {
+            color: inherit !important
+        }
+    </style>
+    <style type="text/css">
+        .MJX_Assistive_MathML {
+            position: absolute !important;
+            top: 0;
+            left: 0;
+            clip: rect(1px, 1px, 1px, 1px);
+            padding: 1px 0 0 0 !important;
+            border: 0 !important;
+            height: 1px !important;
+            width: 1px !important;
+            overflow: hidden !important;
+            display: block !important;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none
+        }
+
+        .MJX_Assistive_MathML.MJX_Assistive_MathML_Block {
+            width: 100% !important
+        }
+    </style>
+    <style type="text/css">
+        #MathJax_Zoom {
+            position: absolute;
+            background-color: #F0F0F0;
+            overflow: auto;
+            display: block;
+            z-index: 301;
+            padding: .5em;
+            border: 1px solid black;
+            margin: 0;
+            font-weight: normal;
+            font-style: normal;
+            text-align: left;
+            text-indent: 0;
+            text-transform: none;
+            line-height: normal;
+            letter-spacing: normal;
+            word-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            float: none;
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+            box-shadow: 5px 5px 15px #AAAAAA;
+            -webkit-box-shadow: 5px 5px 15px #AAAAAA;
+            -moz-box-shadow: 5px 5px 15px #AAAAAA;
+            -khtml-box-shadow: 5px 5px 15px #AAAAAA;
+            filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')
+        }
+
+        #MathJax_ZoomOverlay {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 300;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            padding: 0;
+            margin: 0;
+            background-color: white;
+            opacity: 0;
+            filter: alpha(opacity=0)
+        }
+
+        #MathJax_ZoomFrame {
+            position: relative;
+            display: inline-block;
+            height: 0;
+            width: 0
+        }
+
+        #MathJax_ZoomEventTrap {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 302;
+            display: inline-block;
+            border: 0;
+            padding: 0;
+            margin: 0;
+            background-color: white;
+            opacity: 0;
+            filter: alpha(opacity=0)
+        }
+    </style>
+    <style type="text/css">
+        .MathJax_Preview {
+            color: #888
+        }
+
+        #MathJax_Message {
+            position: fixed;
+            left: 1em;
+            bottom: 1.5em;
+            background-color: #E6E6E6;
+            border: 1px solid #959595;
+            margin: 0px;
+            padding: 2px 8px;
+            z-index: 102;
+            color: black;
+            font-size: 80%;
+            width: auto;
+            white-space: nowrap
+        }
+
+        #MathJax_MSIE_Frame {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0px;
+            z-index: 101;
+            border: 0px;
+            margin: 0px;
+            padding: 0px
+        }
+
+        .MathJax_Error {
+            color: #CC0000;
+            font-style: italic
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./vsCodeHotKey_files/goTop.min.css">
+    <style type="text/css">
+        .MJXp-script {
+            font-size: .8em
+        }
+
+        .MJXp-right {
+            -webkit-transform-origin: right;
+            -moz-transform-origin: right;
+            -ms-transform-origin: right;
+            -o-transform-origin: right;
+            transform-origin: right
+        }
+
+        .MJXp-bold {
+            font-weight: bold
+        }
+
+        .MJXp-italic {
+            font-style: italic
+        }
+
+        .MJXp-scr {
+            font-family: MathJax_Script, 'Times New Roman', Times, STIXGeneral, serif
+        }
+
+        .MJXp-frak {
+            font-family: MathJax_Fraktur, 'Times New Roman', Times, STIXGeneral, serif
+        }
+
+        .MJXp-sf {
+            font-family: MathJax_SansSerif, 'Times New Roman', Times, STIXGeneral, serif
+        }
+
+        .MJXp-cal {
+            font-family: MathJax_Caligraphic, 'Times New Roman', Times, STIXGeneral, serif
+        }
+
+        .MJXp-mono {
+            font-family: MathJax_Typewriter, 'Times New Roman', Times, STIXGeneral, serif
+        }
+
+        .MJXp-largeop {
+            font-size: 150%
+        }
+
+        .MJXp-largeop.MJXp-int {
+            vertical-align: -.2em
+        }
+
+        .MJXp-math {
+            display: inline-block;
+            line-height: 1.2;
+            text-indent: 0;
+            font-family: 'Times New Roman', Times, STIXGeneral, serif;
+            white-space: nowrap;
+            border-collapse: collapse
+        }
+
+        .MJXp-display {
+            display: block;
+            text-align: center;
+            margin: 1em 0
+        }
+
+        .MJXp-math span {
+            display: inline-block
+        }
+
+        .MJXp-box {
+            display: block !important;
+            text-align: center
+        }
+
+        .MJXp-box:after {
+            content: " "
+        }
+
+        .MJXp-rule {
+            display: block !important;
+            margin-top: .1em
+        }
+
+        .MJXp-char {
+            display: block !important
+        }
+
+        .MJXp-mo {
+            margin: 0 .15em
+        }
+
+        .MJXp-mfrac {
+            margin: 0 .125em;
+            vertical-align: .25em
+        }
+
+        .MJXp-denom {
+            display: inline-table !important;
+            width: 100%
+        }
+
+        .MJXp-denom>* {
+            display: table-row !important
+        }
+
+        .MJXp-surd {
+            vertical-align: top
+        }
+
+        .MJXp-surd>* {
+            display: block !important
+        }
+
+        .MJXp-script-box>* {
+            display: table !important;
+            height: 50%
+        }
+
+        .MJXp-script-box>*>* {
+            display: table-cell !important;
+            vertical-align: top
+        }
+
+        .MJXp-script-box>*:last-child>* {
+            vertical-align: bottom
+        }
+
+        .MJXp-script-box>*>*>* {
+            display: block !important
+        }
+
+        .MJXp-mphantom {
+            visibility: hidden
+        }
+
+        .MJXp-munderover {
+            display: inline-table !important
+        }
+
+        .MJXp-over {
+            display: inline-block !important;
+            text-align: center
+        }
+
+        .MJXp-over>* {
+            display: block !important
+        }
+
+        .MJXp-munderover>* {
+            display: table-row !important
+        }
+
+        .MJXp-mtable {
+            vertical-align: .25em;
+            margin: 0 .125em
+        }
+
+        .MJXp-mtable>* {
+            display: inline-table !important;
+            vertical-align: middle
+        }
+
+        .MJXp-mtr {
+            display: table-row !important
+        }
+
+        .MJXp-mtd {
+            display: table-cell !important;
+            text-align: center;
+            padding: .5em 0 0 .5em
+        }
+
+        .MJXp-mtr>.MJXp-mtd:first-child {
+            padding-left: 0
+        }
+
+        .MJXp-mtr:first-child>.MJXp-mtd {
+            padding-top: 0
+        }
+
+        .MJXp-mlabeledtr {
+            display: table-row !important
+        }
+
+        .MJXp-mlabeledtr>.MJXp-mtd:first-child {
+            padding-left: 0
+        }
+
+        .MJXp-mlabeledtr:first-child>.MJXp-mtd {
+            padding-top: 0
+        }
+
+        .MJXp-merror {
+            background-color: #FFFF88;
+            color: #CC0000;
+            border: 1px solid #CC0000;
+            padding: 1px 3px;
+            font-style: normal;
+            font-size: 90%
+        }
+
+        .MJXp-scale0 {
+            -webkit-transform: scaleX(.0);
+            -moz-transform: scaleX(.0);
+            -ms-transform: scaleX(.0);
+            -o-transform: scaleX(.0);
+            transform: scaleX(.0)
+        }
+
+        .MJXp-scale1 {
+            -webkit-transform: scaleX(.1);
+            -moz-transform: scaleX(.1);
+            -ms-transform: scaleX(.1);
+            -o-transform: scaleX(.1);
+            transform: scaleX(.1)
+        }
+
+        .MJXp-scale2 {
+            -webkit-transform: scaleX(.2);
+            -moz-transform: scaleX(.2);
+            -ms-transform: scaleX(.2);
+            -o-transform: scaleX(.2);
+            transform: scaleX(.2)
+        }
+
+        .MJXp-scale3 {
+            -webkit-transform: scaleX(.3);
+            -moz-transform: scaleX(.3);
+            -ms-transform: scaleX(.3);
+            -o-transform: scaleX(.3);
+            transform: scaleX(.3)
+        }
+
+        .MJXp-scale4 {
+            -webkit-transform: scaleX(.4);
+            -moz-transform: scaleX(.4);
+            -ms-transform: scaleX(.4);
+            -o-transform: scaleX(.4);
+            transform: scaleX(.4)
+        }
+
+        .MJXp-scale5 {
+            -webkit-transform: scaleX(.5);
+            -moz-transform: scaleX(.5);
+            -ms-transform: scaleX(.5);
+            -o-transform: scaleX(.5);
+            transform: scaleX(.5)
+        }
+
+        .MJXp-scale6 {
+            -webkit-transform: scaleX(.6);
+            -moz-transform: scaleX(.6);
+            -ms-transform: scaleX(.6);
+            -o-transform: scaleX(.6);
+            transform: scaleX(.6)
+        }
+
+        .MJXp-scale7 {
+            -webkit-transform: scaleX(.7);
+            -moz-transform: scaleX(.7);
+            -ms-transform: scaleX(.7);
+            -o-transform: scaleX(.7);
+            transform: scaleX(.7)
+        }
+
+        .MJXp-scale8 {
+            -webkit-transform: scaleX(.8);
+            -moz-transform: scaleX(.8);
+            -ms-transform: scaleX(.8);
+            -o-transform: scaleX(.8);
+            transform: scaleX(.8)
+        }
+
+        .MJXp-scale9 {
+            -webkit-transform: scaleX(.9);
+            -moz-transform: scaleX(.9);
+            -ms-transform: scaleX(.9);
+            -o-transform: scaleX(.9);
+            transform: scaleX(.9)
+        }
+
+        .MathJax_PHTML .noError {
+            vertical-align: ;
+            font-size: 90%;
+            text-align: left;
+            color: black;
+            padding: 1px 3px;
+            border: 1px solid
+        }
+    </style>
+    <style type="text/css"></style>
+    <style type="text/css"></style>
+    <style type="text/css"></style>
+    <style type="text/css"></style>
+    <style type="text/css"></style>
+    <style type="text/css"></style>
+    <style type="text/css"></style>
+    <style type="text/css"></style>
+    <style type="text/css"></style>
+    <style type="text/css"></style>
+    <style type="text/css"></style>
+    <link rel="stylesheet" href="./vsCodeHotKey_files/share_style0_16.css">
+</head>
+
+<body data-gr-c-s-loaded="true">
+
+    <div class="container clearfix pt0" id="mainBox">
+        <main>
+            <div class="blog-content-box">
+                <div class="article-title-box">
+                    <span class="article-type type-1 float-left">原</span>
+                    <h1 class="title-article">VS Code折腾记 - (2) 快捷键大全，没有更全</h1>
+                </div>
+                <article>
+                    <div id="article_content" class="article_content clearfix csdn-tracking-statistics" data-pid="blog" data-mod="popu_307" data-dsm="post">
+                        <div class="markdown_views">
+                            <h1 id="前言">
+                                <a name="t0"></a>前言</h1>
+
+                            <p>VSCode的快捷键继承了一些IDE风格，有VS的身影，也有Emacs的身影。。简言之，内置快捷键玩熟了，效率提高不是一点两点。</p>
+
+                            <hr>
+
+
+
+                            <h1 id="vscode-快捷键有五种组合方式科普">
+                                <a name="t1"></a>VsCode 快捷键有五种组合方式（科普）</h1>
+
+                            <ol>
+                                <li>
+                                    <code>Ctrl + Shift + ?</code> : 这种常规组合按钮</li>
+                                <li>
+                                    <code>Ctrl + V Ctrl +V</code> : 同时依赖一个按键的组合</li>
+                                <li>
+                                    <code>Shift + V c</code> : 先组合后单键的输入</li>
+                                <li>
+                                    <code>Ctrl + Click</code>: 键盘 + 鼠标点击</li>
+                                <li>
+                                    <code>Ctrl + DragMouse</code> : 键盘 + 鼠标拖动</li>
+                            </ol>
+
+                            <hr>
+
+
+
+                            <h1 id="通用快捷键">
+                                <a name="t2"></a>通用快捷键</h1>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th align="left">快捷键</th>
+                                        <th align="left">作用</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td align="left">Ctrl+Shift+P,F1</td>
+                                        <td align="left">展示全局命令面板</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl+P</td>
+                                        <td align="left">快速打开最近打开的文件</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl+Shift+N</td>
+                                        <td align="left">打开新的编辑器窗口</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl+Shift+W</td>
+                                        <td align="left">关闭编辑器</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                            <hr>
+
+
+
+                            <h1 id="基础编辑">
+                                <a name="t3"></a>基础编辑</h1>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th align="left">快捷键</th>
+                                        <th align="left">作用</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td align="left">Ctrl + X</td>
+                                        <td align="left">剪切</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + C</td>
+                                        <td align="left">复制</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Alt + up/down</td>
+                                        <td align="left">移动行上下</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Shift + Alt up/down</td>
+                                        <td align="left">在当前行上下复制当前行</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + Shift + K</td>
+                                        <td align="left">删除行</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + Enter</td>
+                                        <td align="left">在当前行下插入新的一行</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + Shift + Enter</td>
+                                        <td align="left">在当前行上插入新的一行</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + Shift + | 匹配花括号的闭合处，跳转</td>
+                                        <td align="left"></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + ] / [</td>
+                                        <td align="left">行缩进</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Home</td>
+                                        <td align="left">光标跳转到行头</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">End</td>
+                                        <td align="left">光标跳转到行尾</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + Home</td>
+                                        <td align="left">跳转到页头</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + End</td>
+                                        <td align="left">跳转到页尾</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + up/down</td>
+                                        <td align="left">行视图上下偏移</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Alt + PgUp/PgDown</td>
+                                        <td align="left">屏视图上下偏移</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + Shift + [</td>
+                                        <td align="left">折叠区域代码</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + Shift + ]</td>
+                                        <td align="left">展开区域代码</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + K Ctrl + [</td>
+                                        <td align="left">折叠所有子区域代码</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + k Ctrl + ]</td>
+                                        <td align="left">展开所有折叠的子区域代码</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + K Ctrl + 0</td>
+                                        <td align="left">折叠所有区域代码</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + K Ctrl + J</td>
+                                        <td align="left">展开所有折叠区域代码</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + K Ctrl + C</td>
+                                        <td align="left">添加行注释</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + K Ctrl + U</td>
+                                        <td align="left">删除行注释</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + /</td>
+                                        <td align="left">添加关闭行注释</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Shift + Alt +A</td>
+                                        <td align="left">块区域注释</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Alt + Z</td>
+                                        <td align="left">添加关闭词汇包含</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                            <hr>
+
+
+
+                            <h1 id="导航">
+                                <a name="t4"></a>导航</h1>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th align="left">快捷键</th>
+                                        <th align="left">作用</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td align="left">Ctrl + T</td>
+                                        <td align="left">列出所有符号</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + G</td>
+                                        <td align="left">跳转行</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + P</td>
+                                        <td align="left">跳转文件</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + Shift + O</td>
+                                        <td align="left">跳转到符号处</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + Shift + M</td>
+                                        <td align="left">打开问题展示面板</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">F8</td>
+                                        <td align="left">跳转到下一个错误或者警告</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Shift + F8</td>
+                                        <td align="left">跳转到上一个错误或者警告</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + Shift + Tab</td>
+                                        <td align="left">切换到最近打开的文件</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Alt + left / right</td>
+                                        <td align="left">向后、向前</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + M</td>
+                                        <td align="left">进入用Tab来移动焦点</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                            <hr>
+
+
+
+                            <h1 id="查询与替换">
+                                <a name="t5"></a>查询与替换</h1>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th align="left">快捷键</th>
+                                        <th align="left">作用</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td align="left">Ctrl + F</td>
+                                        <td align="left">查询</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + H</td>
+                                        <td align="left">替换</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">F3 / Shift + F3</td>
+                                        <td align="left">查询下一个/上一个</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Alt + Enter</td>
+                                        <td align="left">选中所有出现在查询中的</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + D</td>
+                                        <td align="left">匹配当前选中的词汇或者行，再次选中-可操作</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + K Ctrl + D</td>
+                                        <td align="left">移动当前选择到下个匹配选择的位置(光标选定)</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Alt + C / R / W</td>
+                                        <td align="left"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                            <hr>
+
+
+
+                            <h1 id="多行光标操作于选择">
+                                <a name="t6"></a>多行光标操作于选择</h1>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th align="left">快捷键</th>
+                                        <th align="left">作用</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td align="left">Alt + Click</td>
+                                        <td align="left">插入光标-支持多个</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + Alt + up/down</td>
+                                        <td align="left">上下插入光标-支持多个</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + U</td>
+                                        <td align="left">撤销最后一次光标操作</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Shift + Alt + I</td>
+                                        <td align="left">插入光标到选中范围内所有行结束符</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + I</td>
+                                        <td align="left">选中当前行</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + Shift + L</td>
+                                        <td align="left">选择所有出现在当前选中的行-操作</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + F2</td>
+                                        <td align="left">选择所有出现在当前选中的词汇-操作</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Shift + Alt + right</td>
+                                        <td align="left">从光标处扩展选中全行</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Shift + Alt + left</td>
+                                        <td align="left">收缩选择区域</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Shift + Alt + (drag mouse)</td>
+                                        <td align="left">鼠标拖动区域，同时在多个行结束符插入光标</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + Shift + Alt + (Arrow Key)</td>
+                                        <td align="left">也是插入多行光标的[方向键控制]</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + Shift + Alt + PgUp/PgDown</td>
+                                        <td align="left">也是插入多行光标的[整屏生效]</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                            <hr>
+
+
+
+                            <h1 id="丰富的语言操作">
+                                <a name="t7"></a>丰富的语言操作</h1>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th align="left">快捷键</th>
+                                        <th align="left">作用</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td align="left">Ctrl + Space</td>
+                                        <td align="left">输入建议[智能提示]</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + Shift + Space</td>
+                                        <td align="left">参数提示</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Tab</td>
+                                        <td align="left">Emmet指令触发/缩进</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Shift + Alt + F</td>
+                                        <td align="left">格式化代码</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + K Ctrl + F</td>
+                                        <td align="left">格式化选中部分的代码</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">F12</td>
+                                        <td align="left">跳转到定义处</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Alt + F12</td>
+                                        <td align="left">代码片段显示定义</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + K F12</td>
+                                        <td align="left">在其他窗口打开定义处</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + .</td>
+                                        <td align="left">快速修复部分可以修复的语法错误</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Shift + F12</td>
+                                        <td align="left">显示所有引用</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">F2</td>
+                                        <td align="left">重命名符号</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + Shift + . / ,</td>
+                                        <td align="left">替换下个值</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + K Ctrl + X</td>
+                                        <td align="left">移除空白字符</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + K M</td>
+                                        <td align="left">更改页面文档格式</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                            <hr>
+
+
+
+                            <h1 id="编辑器管理">
+                                <a name="t8"></a>编辑器管理</h1>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th align="left">快捷键</th>
+                                        <th align="left">作用</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td align="left">Ctrl + F4, Ctrl + W</td>
+                                        <td align="left">关闭编辑器</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + k F</td>
+                                        <td align="left">关闭当前打开的文件夹</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + |切割编辑窗口</td>
+                                        <td align="left"></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + 1/2/3</td>
+                                        <td align="left">切换焦点在不同的切割窗口</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + K Ctrl &lt;-/-&gt;</td>
+                                        <td align="left">切换焦点在不同的切割窗口</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + Shift + PgUp/PgDown</td>
+                                        <td align="left">切换标签页的位置</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + K &lt;-/-&gt;</td>
+                                        <td align="left">切割窗口位置调换</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                            <hr>
+
+
+
+                            <h1 id="文件管理">
+                                <a name="t9"></a>文件管理</h1>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th align="left">快捷键</th>
+                                        <th align="left">作用</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td align="left">Ctrl + N</td>
+                                        <td align="left">新建文件</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + O</td>
+                                        <td align="left">打开文件</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + S</td>
+                                        <td align="left">保存文件</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + Shift + S</td>
+                                        <td align="left">另存为</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + K S</td>
+                                        <td align="left">保存所有当前已经打开的文件</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + F4</td>
+                                        <td align="left">关闭当前编辑窗口</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + K Ctrl + W</td>
+                                        <td align="left">关闭所有编辑窗口</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + Shift + T</td>
+                                        <td align="left">撤销最近关闭的一个文件编辑窗口</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + K Enter</td>
+                                        <td align="left">保持开启</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + Shift + Tab</td>
+                                        <td align="left">调出最近打开的文件列表，重复按会切换</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + Tab</td>
+                                        <td align="left">与上面一致，顺序不一致</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + K P</td>
+                                        <td align="left">复制当前打开文件的存放路径</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + K R</td>
+                                        <td align="left">打开当前编辑文件存放位置【文件管理器】</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + K O</td>
+                                        <td align="left">在新的编辑器中打开当前编辑的文件</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                            <hr>
+
+
+
+                            <h1 id="显示">
+                                <a name="t10"></a>显示</h1>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th align="left">快捷键</th>
+                                        <th align="left">作用</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td align="left">F11</td>
+                                        <td align="left">切换全屏模式</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Shift + Alt + 1</td>
+                                        <td align="left">切换编辑布局【目前无效】</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + =/-</td>
+                                        <td align="left">放大 / 缩小</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + B</td>
+                                        <td align="left">侧边栏显示隐藏</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + Shift + E</td>
+                                        <td align="left">资源视图和编辑视图的焦点切换</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + Shift + F</td>
+                                        <td align="left">打开全局搜索</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + Shift + G</td>
+                                        <td align="left">打开Git可视管理</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + Shift + D</td>
+                                        <td align="left">打开DeBug面板</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + Shift + X</td>
+                                        <td align="left">打开插件市场面板</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + Shift + H</td>
+                                        <td align="left">在当前文件替换查询替换</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + Shift + J</td>
+                                        <td align="left">开启详细查询</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + Shift + V</td>
+                                        <td align="left">预览Markdown文件【编译后】</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + K v</td>
+                                        <td align="left">在边栏打开渲染后的视图【新建】</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                            <hr>
+
+
+
+                            <h1 id="调试">
+                                <a name="t11"></a>调试</h1>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th align="left">快捷键</th>
+                                        <th align="left">作用</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td align="left">F9</td>
+                                        <td align="left">添加解除断点</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">F5</td>
+                                        <td align="left">启动调试、继续</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">F11 / Shift + F11</td>
+                                        <td align="left">单步进入 / 单步跳出</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">F10</td>
+                                        <td align="left">单步跳过</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + K Ctrl + I</td>
+                                        <td align="left">显示悬浮</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                            <hr>
+
+
+
+                            <h1 id="集成终端">
+                                <a name="t12"></a>集成终端</h1>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th align="left">快捷键</th>
+                                        <th align="left">作用</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td align="left">Ctrl + `</td>
+                                        <td align="left">打开集成终端</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + Shift + `</td>
+                                        <td align="left">创建一个新的终端</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + Shift + C</td>
+                                        <td align="left">复制所选</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + Shift + V</td>
+                                        <td align="left">复制到当前激活的终端</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Shift + PgUp / PgDown</td>
+                                        <td align="left">页面上下翻屏</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">Ctrl + Home / End</td>
+                                        <td align="left">滚动到页面头部或尾部</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                            <hr>
+
+
+
+                            <h1 id="总结">
+                                <a name="t13"></a>总结</h1>
+
+                            <p>所有翻译肯定都不是标译的啦…..，我的翻译都是比较接近口语化和使用的</p>
+                        </div>
+                        <link rel="stylesheet" href="./vsCodeHotKey_files/markdown_views-ea0013b516.css">
+                    </div>
+
+                </article>
+
+                <!-- !empty($pre_next_article[0]) -->
+            </div>
+</body>
+
+</html>

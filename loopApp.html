@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html ng-app="">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="./css/w3.css">
+    <script src="angular.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <div ng-init="arr=[12,5,8,12,5,8]">
+        <ul class="w3-ul">
+            <h3>ng-repeat 不能在init array里面出现重复数据，出于性能考虑，数据和元素1:1对应，采用key value mapping</h3>
+            <h3>解决方案:track by $index</h3>
+            <li ng-repeat="item in arr track by $index">{{$index}}, {{item}}</li>
+        </ul>
+    </div>
+    <div ng-init="arr=[{user: 'Tony', age: 30}, {user: 'Tony', age: 30}, {user: 'Tony', age: 30}, {user: 'Tony', age: 30}]">
+        <ul class="w3-ul">
+            <li ng-repeat="json in arr track by $index">Name: {{json.user}}, Age: {{json.age}}</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

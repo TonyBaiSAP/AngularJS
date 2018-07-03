@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="test">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/w3.css" />
+    <script src="angular.js"></script>
+    <script>
+        let module = angular.module('test', []);
+        module.controller('main', function($scope, $http) {
+            $scope.a = arguments.length;
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <ul class="w3-ul">
+            <li>
+                <h3 class="w3-h3">双向绑定</h3>
+                <pre>
+                    ng-model
+                    数据<->UI
+                    $scope<->HTML
+                </pre>
+            </li>
+            <li>
+                <h3 class="w3-h3">依赖注入(依赖反转)</h3>
+                <pre>
+                    函数无法决定需要参数，给什么接什么。
+                    依赖注入的时候，要什么就能得到什么，由函数决定参数
+                </pre>
+            </li>
+            <li>
+                    <h3 class="w3-h3">名词</h3>
+                    <pre>
+                        “属性”  指令  ng-开头是angular自带的指令
+                        “参数”  依赖  $开头是angular自带的依赖
+                    </pre>
+                </li>
+        </ul>
+        
+    </div>
+    <div ng-controller="main">
+        <span>{{a}}</span>
+    </div>
+    
+</body>
+</html>

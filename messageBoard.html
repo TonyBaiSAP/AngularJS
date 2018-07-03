@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="./css/w3.css">
+    <script src="angular.js" charset="utf-8"></script>
+</head>
+
+<body ng-init="arr=[{name: 'blue', content: 'Hello'}, {name: 'yellow', content: 'Hello'} ,{name: 'red', content: 'Hello'}, {name: 'white', content: 'Hello'}]">
+    名字:
+    <input class="w3-col.s6" type="text" name="" value="" ng-model="name">
+    <br> 内容:
+    <input class="w3-col.s6" type="text" name="" value="" ng-model="content">
+    <br>
+    <input type="button" class="w3-btn" value="提交" ng-click="arr.unshift({name: name, content: content})">
+    <ul class="w3-ul">
+        <li ng-repeat="json in arr">
+            <h4 class="w3-h4">{{json.name}}</h4>
+            <p class="w3-panel">{{json.content}}</p>
+        </li>
+    </ul>
+</body>
+
+</html>

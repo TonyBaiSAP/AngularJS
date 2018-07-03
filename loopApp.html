@@ -21,6 +21,16 @@
             <li ng-repeat="json in arr track by $index">Name: {{json.user}}, Age: {{json.age}}</li>
         </ul>
     </div>
+    <h3 class="w3-h3">ng-repeat json data</h3>
+    <div ng-init="json={a:1, b:2, c:3}">
+        <ul class="w3-ul">
+            <li ng-repeat="item in json">{{item}}</li>
+        </ul>
+        <h3 class="w3-h3">loop with key value, also can be used in array looping</h3>
+        <ul class="w3-ul">
+            <li ng-repeat="(key, value) in json">{{key}}, {{value}}</li>
+        </ul>
+    </div>
 
 </body>
 

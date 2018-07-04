@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app="test_ajax">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/w3.css" />
+    <script src="angular.js"></script>
+    <script src="jquery.js"></script>
+    <script>
+        let mod = angular.module('test_ajax', []);
+        mod.controller('main', function ($scope, $http) {
+            //$scope.arr = [12, 5, 8];
+            // $.ajax({
+            //     url: './data/arr.txt',
+            //     dataType: 'json',
+            //     success(res) {
+            //         $scope.isSuccess = 0;
+            //         $scope.arr = res;
+            //         $scope.$apply();
+            //     },
+            //     error() {
+            //         $scope.isSuccess = 1;
+            //         $scope.$apply();
+            //     }
+            // });
+            $http.get('./data/arr.txt')
+                .then((res) => {
+                    $scope.isSuccess = true;
+                    $scope.arr = res.data;
+                }, (err) => {
+                    $scope.isSuccess = false;
+                });
+        })
+    </script>
+</head>
+
+<body>
+    <div ng-controller="main">
+        <h3 class="w3-h3"></h3>
+        <ul class="w3-ul">
+            <li ng-repeat="a in arr">{{a}}</li>
+        </ul>
+        <span class="w3-spin">{{isSuccess}}</span>
+        <pre>
+            $.ajax({
+                url: './data/arr.txt',
+                dataType: 'json',
+                success(res) {
+                    $scope.isSuccess = 0;
+                    $scope.arr = res;
+                },
+                error() {
+                    $scope.isSuccess = 1;
+                }
+            });
+            可以获取到res，但是无法告知angular scope中的数据变化了, $scope会先去做一次检查。
+            但是异步操作里面返回的数据即使赋值给scope，但是不会做检查。
+            $scope.$apply();
+        </pre>
+            1. $scope.$apply()
+            2. 采用angular自带的依赖$http $http.get, $http.post, $http.jsonp
+        </pre>
+    </div>
+</body>
+
+</html>
+        <h3 class="w3-h3">异步问题</h3>
+        <pre>

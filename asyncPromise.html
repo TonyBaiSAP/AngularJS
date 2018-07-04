@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html ng-app="test">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/w3.css" />
+    <script src="angular.js"></script>
+    <script src="jquery.js"></script>
+    <script>
+        let mod = angular.module('test', []);
+        mod.controller('main', function ($scope, $interval, $timeout, $http, $q) {
+            //Async
+            $scope.a = 0;
+            $scope.b = 0;
+            $interval(function () {
+                $scope.a++;
+            }, 1000);
+            $timeout(function () {
+                $scope.b++;
+            }, 2000);
+
+            //传统Jquery Ajax
+            $.ajax({
+                url: './data/p1.txt',
+                dataType: 'json',
+                success(data1) {
+                    $.ajax({
+                        url: './data/p2.txt',
+                        dataType: 'json',
+                        success(data2) {
+                            $.ajax({
+                                url: './data/p3.txt',
+                                dataType: 'json',
+                                success(data3) {
+                                    console.log("Data from Ajax", data1, data2, data3);
+                                },
+                                error() {
+                                    alert("data3 error");
+                                }
+                            });
+                        },
+                        error() {
+                            alert("data2 error");
+                        }
+                    });
+                },
+                error() {
+                    alert("data1 error");
+                }
+            });
+
+            //Promise
+            Promise.all([
+                $.ajax({ url: './data/p1.txt', dataType: 'json' }),
+                $.ajax({ url: './data/p2.txt', dataType: 'json' }),
+                $.ajax({ url: './data/p3.txt', dataType: 'json' })
+            ]).then(arr => {
+                console.log("Data from promise", arr);
+            }, () => {
+                alert("Error");
+            });
+
+            //Angular Promise
+            Promise.all([
+                $http.get('./data/p1.txt'),
+                $http.get('./data/p1.txt'),
+                $http.get('./data/p1.txt')
+            ]).then(arr => {
+                [{data: $scope.pdata1}, {data: $scope.pdata2}, {data: $scope.pdata3}] = arr;
+                $scope.$apply();
+            }, () => {
+                alert("Error");
+            });
+
+            $q.all([
+                $http.get('./data/p1.txt'),
+                $http.get('./data/p1.txt'),
+                $http.get('./data/p1.txt')
+            ]).then(arr => {
+                [{data: $scope.qdata1}, {data: $scope.qdata2}, {data: $scope.qdata3}] = arr;
+            }, () => {
+                alert("Error");
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <div ng-controller="main">
+
+        <ul class="w3-ul">
+            <h3 class="w3-h3">异步</h3>
+            <li>
+                a:{{a}}, b:{{b}}
+            </li>
+            <h3 class="w3-h3">传统jquery ajax</h3>
+            <pre>
+                $.ajax({
+                    url: './data/p1.txt',
+                    dataType: 'json',
+                    success(data1) {
+                        $.ajax({
+                            url: './data/p2.txt',
+                            dataType: 'json',
+                            success(data2) {
+                                $.ajax({
+                                    url: './data/p3.txt',
+                                    dataType: 'json',
+                                    success(data3) {
+                                        console.log(data1, data2, data3);
+                                    },
+                                    error() {
+                                        alert("data3 error");
+                                    }
+                                });
+                            },
+                            error() {
+                                alert("data2 error");
+                            }
+                        });
+                    },
+                    error() {
+                        alert("data1 error");
+                    }
+                });
+        
+            </pre>
+            <h3 class="w3-h3">Promise</h3>
+            <pre>
+                Promise.all([
+                    $.ajax({url: './data/p1.txt', dataType: 'json'}),
+                    $.ajax({url: './data/p2.txt', dataType: 'json'}),
+                    $.ajax({url: './data/p3.txt', dataType: 'json'}),
+                ]).then(arr => {
+                    console.log("Data from promise", arr);
+                }, () => {
+                    alert("Error");
+                });
+        
+            </pre>
+            <h3 class="w3-h3">Angular Promise</h3>
+            <pre>
+                Promise.all([
+                    $http.get('./data/p1.txt'),
+                    $http.get('./data/p1.txt'),
+                    $http.get('./data/p1.txt')
+                ]).then(arr => {
+                    [$scope.data1, $scope.data2, $scope.data3] = arr;
+                    $scope.$apply();
+                }, () => {
+                    alert("Error");
+                });
+        
+            </pre>
+            <ul class="w3-ul">
+                <li>{{pdata1}}</li>
+                <li>{{pdata2}}</li>
+                <li>{{pdata3}}</li>
+            </ul>
+            <h3 class="w3-h3">Angular $q 依赖</h3>
+            <pre>
+                $q.all([
+                    $http.get('./data/p1.txt'),
+                    $http.get('./data/p1.txt'),
+                    $http.get('./data/p1.txt')
+                ]).then(arr => {
+                    [$scope.data1, $scope.data2, $scope.data3] = arr;
+                }, () => {
+                    alert("Error");
+                });
+        
+            </pre>
+            <ul class="w3-ul">
+                <li>{{qdata1}}</li>
+                <li>{{qdata2}}</li>
+                <li>{{qdata3}}</li>
+            </ul>
+        </ul>
+    </div>
+</body>
+
+</html>

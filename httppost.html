@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html ng-app="httppost">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/w3.css" />
+    <script src="angular.js"></script>
+    <script>
+        let mod = angular.module("httppost", []);
+        //更改module config
+        //httpProvider每个依赖都有一个provider
+        mod.config(function ($httpProvider) {
+            $httpProvider.defaults.transformRequest = function (obj) {
+                let arr = [];
+                for (let name in obj) {
+                    arr.push(`${name}=${obj[name]}`);
+                }
+                return arr.join("&");
+            };
+
+            $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+        });
+        mod.controller("main", function ($scope, $http) {
+            $scope.calc = function () {
+                // $http.post('./services/post.php', {
+                //     a: $scope.a,
+                //     b: $scope.b
+                // }, )
+                // .then(res => {
+                //     alert(res.data);
+                // }, () => {
+                //     alert("Error");
+                // });
+
+                //更改post头文件
+                // $http({
+                //     method: 'POST',
+                //     url: './services/post.php',
+                //     data: {
+                //         a: $scope.a,
+                //         b: $scope.b
+                //     },
+                //     headers: {
+                //         'content-type': 'application/x-www-form-urlencoded'
+                //     },
+                //     transformRequest: function (obj) {
+                //         let arr = [];
+                //         for (let name in obj) {
+                //             arr.push(`${name}=${obj[name]}`);
+                //         }
+                //         return arr.join("&");
+                //     }
+                // })
+                // .then(res => {
+                //     alert(res.data);
+                // }, () => {
+                //     alert("Error");
+                // });
+
+
+                $http({
+                    method: 'POST',
+                    url: './services/post.php',
+                    data: {
+                        a: $scope.a,
+                        b: $scope.b
+                    }
+                })
+                    .then(res => {
+                        alert(res.data);
+                    }, () => {
+                        alert("Error");
+                    });
+            };
+        });
+    </script>
+</head>
+
+<body>
+    <form action="./services/post.php" method="post">
+        <input type="text" name="a" value="" class="w3-col.s6">
+        <input type="text" name="b" value="" class="w3-col.s6">
+        <input type="submit" value="Submit">
+    </form>
+    <div ng-controller="main">
+        <input type="text" ng-model="a" class="w3-col.s6">
+        <input type="text" ng-model="b" class="w3-col.s6">
+        <input type="button" value="Calculate" ng-click="calc()">
+    </div>
+    <h3>Angular的post数据量大</h3>
+    <pre>
+        jQuery, 原生Ajax:
+        application/x-www-form-urlencoded  经典--所有服务器都支持
+
+        Angular JS:
+        json                              新潮--部分服务器不支持
+    </pre>
+    <pre>
+        1.从后台入手
+        2.前台解决
+            改AngularJS库---不靠谱
+            配置AngularJS库的post方式
+                a.改头文件
+                $http({
+                    method: 'POST',
+                    url: './services/post.php',
+                    data: {
+                        a: $scope.a,
+                        b: $scope.b
+                    },
+                    headers: {
+                        'content-type': 'application/x-www-form-urlencoded'
+                    },
+                    transformRequest: function (obj) {
+                        let arr=[];
+                        for(let name in obj) {
+                            arr.push(`${name}=${obj[name]}`);
+                        }
+                        return arr.join("&");
+                    }
+                })
+                .then(res => {
+                    alert(res.data);
+                }, () => {
+                    alert("Error");
+                });
+                b.高大上
+                //更改module config
+                //httpProvider每个依赖都有一个provider
+                mod.config(function ($httpProvider) {
+                    $httpProvider.defaults.transformRequest = function (obj) {
+                        let arr = [];
+                        for (let name in obj) {
+                            arr.push(`${name}=${obj[name]}`);
+                        }
+                        return arr.join("&");
+                    };
+
+                    $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+                });
+
+    </pre>
+</body>
+
+</html>

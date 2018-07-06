@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html ng-app="test">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/w3.css" />
+    <script src="jquery.js"></script>
+    <script src="angular.js"></script>
+    <script>
+        // $.ajax({
+        //     url: 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su',
+        //     data: { wd: 'qq' },
+        //     dataType: 'jsonp',
+        //     jsonp: 'cb',
+        //     success(res) {
+        //         alert(res.s);
+        //     },
+        //     error() {
+        //         alert('错了');
+        //     }
+        // });
+    </script>
+    <script>
+        let mod = angular.module('test', []);
+        mod.controller('main', function ($scope, $http, $sce) {
+            $scope.arr = [];
+            $scope.word = '';
+            // $scope.$watch('word', function () {
+            //     $http.jsonp(`https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=${$scope.word}&cb=JSON_CALLBACK`).then(res => {
+            //         $scope.arr = res.data.s;
+            //     }, () => {
+            //         alert('Error');
+            //     });
+            // });
+
+            $scope.$watch('word', function () {
+                let res = $sce.trustAsResourceUrl(`https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=${$scope.word}`);
+
+                $http.jsonp(res, { jsonpCallbackParam: 'cb' }).then(res => {
+                    $scope.arr = res.data.s;
+                }, () => {
+                    alert('错了');
+                });
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <div ng-controller="main">
+        <h3 class="w3-h3">jQuery JSONP</h3>
+        <pre>
+                $.ajax({
+                    url: 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su',
+                    data: { wd: 'qq' },
+                    dataType: 'jsonp',
+                    jsonp: 'cb',
+                    success(res) {
+                        alert(res.s);
+                    },
+                    error() {
+                        alert('错了');
+                    }
+                });
+        </pre>
+        <h3 class="w3-h3">Angular 1.5.8 JSONP</h3>
+        <pre>
+                let mod = angular.module('test', []);
+                mod.controller('main', function ($scope, $http) {
+                    $scope.arr = [];
+                    $scope.word = '';
+                    $scope.$watch('word', function () {
+                        $http.jsonp(`https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=${$scope.word}&cb=JSON_CALLBACK`).then(res => {
+                            $scope.arr = res.data.s;
+                        }, () => {
+                            alert('Error');
+                        });
+                    });
+
+                });
+        </pre>
+        <input type="text" ng-model="word">
+        <ul class="w3-ul">
+            <li ng-repeat="str in arr">{{str}}</li>
+        </ul>
+        <h3 class="w3-h3">Angular 1.6.4 JSONP</h3>
+        <pre>
+                let mod = angular.module('test', []);
+                mod.controller('main', function ($scope, $http, $sce) {
+                    $scope.arr = [];
+                    $scope.word = '';
+        
+                    $scope.$watch('word', function () {
+                        let res = $sce.trustAsResourceUrl(`https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=${$scope.word}`);
+        
+                        $http.jsonp(res, { jsonpCallbackParam: 'cb' }).then(res => {
+                            $scope.arr = res.data.s;
+                        }, () => {
+                            alert('错了');
+                        });
+                    });
+        
+                });
+        </pre>
+    </div>
+</body>
+
+</html>

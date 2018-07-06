@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/w3.css" />
+    <script src="angular.js"></script>
+    <script src="common.js"></script>
+    <script>
+        // let mod_a = angular.module('a', []);
+        // mod_a.controller('test_a', function($scope) {
+        //     $scope.a = 12;
+        // });
+        // let mod_b = angular.module('b', []);
+        // mod_b.controller('test_b', function($scope) {
+        //     $scope.b = 5;
+        // });
+        // angular.module('test', ['a', 'b']);
+
+        let mod = angular.module('test_main', ['common']);
+
+        mod.controller('main', function ($http) {
+            $http({
+                method: 'post',
+                url: './services/postModule.php',
+                data: { a: 12, b: 5 }
+            }).then(res => {
+                alert(res.data);
+            }, () => {
+                alert("Error");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- <div ng-app="test" ng-controller="test_a">
+        {{a}}
+    </div> -->
+    <div ng-app="test_main" ng-controller="main">
+
+    </div>
+</body>
+
+</html>

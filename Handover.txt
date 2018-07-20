@@ -1,0 +1,36 @@
+1. Order Reduction
+Data flow：Product change workflow -> Left controller -> PackItem workflow
+Condation: Yes/No
+
+onProcessOrderReduction --- Left.controller.js
+/* 
+ * Order Reduction Yes
+ * Deal with order reduction quantity, packing item to shipping handling unit.
+*/
+onNotProcessOrderReduction
+/* 
+ * Order Reduction No
+ * Do not deal with order reduction quantity. Like normal product change.
+*/
+setItemQtyReducedInitialized
+/*
+ * Change item QtyReduced property to "0"
+*/
+
+Note: When yes answer, the reduction quantity should be stored in the storage bin, and without ODO information.
+
+2.Basic Mode
+Pack item one by one, there should a property to store origin AlterQuan. Otherwise, we will miss this value to tell real pack service happen.
+Source Change: setItemsDefaultQuan -> Backup original AlterQuan
+Product Change: If AlterQuan less than 1, pack the item to shipping handling unit.
+ else AlterQuan greater than or equal 1, pack 1 item to shipping handling unit without call pack service
+Pack Item: PackedQuan(@param number) -> the real quantity has been packed in the shipping handling unit.
+           PreviousAlterQuan(@param string) -> remenber last value of quantity input box. When packer changed input value, calculate delta quantity for pack(+) or unpack(-).
+           OperationDeltaQuan(@param number) -> When OperationDeltaQuan equal DefaultQuan, call pack service(full quantity pack) 
+flushPendings: If there are items not being confirmed in the shipping handling unit before Change Package Material, Close, Leave, Source Change, Home, Back and so on.
+               Useing this to send items confirm.
+Note: In basic mode, we will refer to shipping handling unit item's quantity, if in the 
+source side, the same item with different value, change the source item's value to item in right.
+
+
+

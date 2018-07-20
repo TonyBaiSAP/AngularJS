@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html ng-app="weibo">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Weibo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/weibo.css" />
+    <script src="angular.js"></script>
+    <script>
+        let mod = angular.module('weibo', []);
+        mod.config(function ($httpProvider) {
+            $httpProvider.defaults.transformRequest = function (obj) {
+                let arr = [];
+                for (let name in obj) {
+                    arr.push(`${name}=${obj[name]}`);
+                }
+                return arr.join("&");
+            };
+
+            $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+        });
+        mod.controller('main', function($scope, $http) {
+            $scope.msg_list = [];
+            //Add message
+            $scope.addMessage = function() {
+                $http.get('./services/weibo.php?act=add&content=${$scope.text}')
+                    .then(res => {
+                        let json = res.data;
+                        if(json.error) {
+                            alert("Error");
+                        } else {
+
+                        }
+                    }, () => {
+                        alert("Error");
+                    });
+            };
+
+            //Show message
+            $http.get('./services/weibo.php?act=get&page=1')
+                    .then(res => {
+                        $scope.msg_list = res.data;
+                    }, oError => {
+                        alert("get message failed");
+                    });
+        });
+    </script>
+</head>
+<body ng-controller="main">
+    <div class="znsArea">
+        <div class="takeComment">
+            <textarea name="textarea" class="takeTextField" ng-model="text"></textarea>
+            <div class="takeSbmComment">
+                <input type="button" value="" ng-click="addMessage()" class="inputs" />
+                <span>（可按 Enter 回复）</span>
+            </div>
+        </div>
+    </div>
+    <div class="commentOn">
+        <div class="page">
+            <a href="javascript:;" class="active">1</a>
+            <a href="javascript:;">2</a>
+            <a href="javascript:;">3</a>
+        </div>
+        <div class="messList" id="msg_box">
+            <div class="reply" ng-repeat="msg in msg_list">
+                <p class="replyContent">{{msg.content}}</p>
+                <p class="operation">
+                    <span class="replyTime">{{msg.time|data:"y年MM月dd日 HH:mm:ss a"}}</span>
+                    <span class="handle">
+                        <a href="javascript:;" class="top"></a>
+                        <a href="javascript:;" class="down_icon"></a>
+                        <a href="javascript:;" class="cut">Delete</a>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
